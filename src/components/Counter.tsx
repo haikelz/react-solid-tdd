@@ -5,13 +5,23 @@ export default function Counter() {
 
   return (
     <div>
-      <h1>{count}</h1>
+      <h1 data-testid="count">{count}</h1>
       <div>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
-        <button onClick={() => multiply(2)}>Multiply</button>
-        <button onClick={() => divide(2)}>Divide</button>
-        <button onClick={reset}>Reset</button>
+        <button data-testid="increment" onClick={increment}>
+          Increment
+        </button>
+        <button data-testid="decrement" onClick={decrement}>
+          Decrement
+        </button>
+        <button data-testid="multiply" onClick={() => multiply(2)}>
+          Multiply
+        </button>
+        <button data-testid="divide" onClick={() => divide(2)}>
+          Divide
+        </button>
+        <button data-testid="reset" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   );
